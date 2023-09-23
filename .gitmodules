@@ -1,0 +1,4 @@
+[submodule "kb/wave_find_path_scp"]
+	path = kb/wave_find_path_scp
+	url = https://github.com/NikitaZotov/wave_find_path_scp.git
+	branch = fix/new_scp
