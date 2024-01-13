@@ -57,9 +57,18 @@ sc_result SCPOperator::CheckNullValues()
         k++;
         if (!(*i))
         {
+
+          std::cout<<"check lol"<<std::endl;
+          if (GetTypeName() == "sys_gen" && k == 5)
+          {
+            std::cout<<"lol is here"<<std::endl;
+            return SC_RESULT_OK;
+          }
+
+          std::cout<<"----------------------not lol"<<std::endl;
 #ifdef SCP_DEBUG
-            // Utils::logSCPError(ms_context, "One or more operands missed", addr);
-            // std::cout<<"NUMBER: "<<k<<std::endl;
+             Utils::logSCPError(ms_context, "One or more operands missed", addr);
+             std::cout<<"NUMBER: "<<k<<std::endl;
             Utils::printInfo(ms_context, addr);
 #endif
             FinishExecutionWithError();
